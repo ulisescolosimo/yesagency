@@ -31,8 +31,8 @@ export default function WithSubnavigation() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("gray.900", "white")}
-        color={useColorModeValue("gray.600", "white")}
+        bg={("gray.900")}
+        color={("gray.900")}
         minH={"60px"}
         py={{ base: 4 }}
         px={{ base: 4 }}
@@ -49,7 +49,7 @@ export default function WithSubnavigation() {
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
-            color={'white'}
+            color={'black'}
             aria-label={"Toggle Navigation"}
           />
         </Flex>
@@ -175,7 +175,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={"red.500"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>
@@ -185,9 +185,9 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue("gray.900", "white")}
+      bg={useColorModeValue("gray.900", "gray.900")}
       p={4}
-      color={'whiteAlpha.100'}
+      color={'gray.900'}
       display={{ md: "none" }}
     >
       {NAV_ITEMS.map((navItem) => (
@@ -211,7 +211,7 @@ const MobileNavItem = ({ label, children, href }) => {
         _hover={{
           textDecoration: "none",
         }}
-        color={'whiteAlpha.400'}
+        color={'red.400'}
       >
         <Text
           fontWeight={600}
@@ -227,6 +227,8 @@ const MobileNavItem = ({ label, children, href }) => {
             transform={isOpen ? "rotate(180deg)" : ""}
             w={6}
             h={6}
+            bg={'red.500'}
+            color={'red.500'}
           />
         )}
       </Flex>
