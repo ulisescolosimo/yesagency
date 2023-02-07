@@ -37,8 +37,6 @@ export default function WithSubnavigation() {
         py={{ base: 4 }}
         px={{ base: 4 }}
         borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
         <Flex
@@ -51,7 +49,7 @@ export default function WithSubnavigation() {
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
-            variant={"ghost"}
+            color={'white'}
             aria-label={"Toggle Navigation"}
           />
         </Flex>
@@ -96,9 +94,6 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-  const LinkColor = useColorModeValue("gray.900", "gray.200");
-  const LinkHoverColor = useColorModeValue("gray.900", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
     <Stack
@@ -108,7 +103,7 @@ const DesktopNav = () => {
       alignItems={"center"}
     >
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
+        <Box key={navItem.label} >
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
@@ -117,10 +112,10 @@ const DesktopNav = () => {
                 p={2}
                 fontSize={"lg"}
                 fontWeight={500}
-                color={LinkColor}
+                color={'white'}
                 _hover={{
                   textDecoration: "none",
-                  color: LinkHoverColor,
+                  color: 'red',
                 }}
               >
                 {navItem.label}
@@ -131,7 +126,6 @@ const DesktopNav = () => {
               <PopoverContent
                 border={0}
                 boxShadow={"xl"}
-                bg={popoverContentBgColor}
                 p={4}
                 rounded={"xl"}
                 minW={"sm"}
@@ -191,8 +185,9 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue("white", "gray.800")}
+      bg={useColorModeValue("gray.900", "white")}
       p={4}
+      color={'whiteAlpha.100'}
       display={{ md: "none" }}
     >
       {NAV_ITEMS.map((navItem) => (
@@ -216,10 +211,12 @@ const MobileNavItem = ({ label, children, href }) => {
         _hover={{
           textDecoration: "none",
         }}
+        color={'whiteAlpha.400'}
       >
         <Text
           fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
+          color={useColorModeValue("white", "red.600")}
+          _hover={{color: 'red.500'}}
         >
           {label}
         </Text>
