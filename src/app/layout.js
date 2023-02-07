@@ -1,14 +1,20 @@
-import './globals.css'
+"use client";
+
+import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import { ChakraProvider } from "@chakra-ui/react";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
+      <head><title>Yes Travel</title></head>
+      <body className="flex flex-col">
+        <ChakraProvider>
+          <Navbar />
+            <div className="h-full">{children}</div>
+          <Footer />
+        </ChakraProvider>
+      </body>
     </html>
-  )
+  );
 }
