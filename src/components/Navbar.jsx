@@ -49,7 +49,10 @@ export default function WithSubnavigation() {
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
-            color={'black'}
+            color={'red'}
+            bg={'none'}
+            _hover={'none'}
+            ml={10}
             aria-label={"Toggle Navigation"}
           />
         </Flex>
@@ -186,7 +189,7 @@ const MobileNav = () => {
   return (
     <Stack
       bg={useColorModeValue("gray.900", "gray.900")}
-      p={4}
+      p={12}
       color={'gray.900'}
       display={{ md: "none" }}
     >
