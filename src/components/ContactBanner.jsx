@@ -6,7 +6,6 @@ const ContactBanner = () => {
       <div className="flex justify-around w-full flex-wrap items-center">
       <div className="flex flex-col justify-center my-5 items-center mx-5">
         <h1 className="text-4xl font-bold">Get in touch</h1>
-        <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
         <div className="space-y-4">
           <p className="flex items-center">
             <svg
