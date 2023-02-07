@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col">
         <ChakraProvider>
           <Navbar />
-            <div className="h-full">{children}</div>
+            <div className="h-full bg-gray-800">{children}</div>
           <Footer />
         </ChakraProvider>
       </body>
