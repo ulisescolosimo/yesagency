@@ -5,7 +5,7 @@ const ContactBanner = () => {
     <section className="rounded-lg p-5 flex justify-evenly flex-wrap items-center dark:bg-gray-900 dark:text-gray-50">
       <div className="flex justify-around w-full flex-wrap items-center">
       <div className="flex flex-col justify-center my-5 items-center mx-5">
-        <h1 className="text-4xl font-bold">Get in touch</h1>
+        <h1 className="text-4xl mb-4 font-bold">Get in touch</h1>
         <div className="space-y-4">
           <p className="flex items-center">
             <svg
@@ -50,14 +50,7 @@ const ContactBanner = () => {
       <div className="">
       <iframe
   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14370.44500828898!2d-80.29078!3d25.783401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b9c3b0bcec1b%3A0xfd983da3054e6685!2s5775%20Blue%20Lagoon%20Dr%20Suite%20102%2C%20Miami%2C%20FL%2033126%2C%20EE.%20UU.!5e0!3m2!1ses-419!2spe!4v1675726296524!5m2!1ses-419!2spe"
-  style={{
-    width: '100%',
-    height: '400px',
-    maxWidth: '500px',
-    maxHeight: '400px',
-    border: 0
-  }}
-  className="rounded-lg"
+  className="rounded-lg w-auto max-w-[500px] h-60"
   allowfullscreen=""
   loading="lazy"
   referrerpolicy="no-referrer-when-downgrade"
